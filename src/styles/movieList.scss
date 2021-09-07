@@ -1,0 +1,125 @@
+@import './index.scss';
+
+.movie-container{
+  // For Header.js
+  .goBack{
+    position: absolute;
+    top: 6px;
+    left: 60px;
+    z-index: 999;
+    text-decoration: underline;
+    color: $primary-button;
+    font-weight: 600;
+  }
+  .container{
+    width: 90%;
+    .left-filter{
+      justify-content: left;
+      padding: 10px;
+    }
+    .radio{
+      cursor: pointer!important;
+    }
+    .filter-container{
+      width: 250px;
+      margin: 5px;
+      
+      .input-btn{
+        cursor: pointer;
+        width: 230px;
+        padding: 5px;
+        border: 1px solid $border-color;
+        background-color: $border-color;
+      }
+      .triangle{
+        padding: 5px;
+        background-color: white;
+        transform-origin: 0;
+        transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        display: inline-block;
+        position: absolute;
+        left: 27px;
+        top: 30px;
+        border: 1px solid $border-color;
+        border-right:none ;
+        border-bottom: none;
+        z-index: 999;
+      }
+      .options{
+        height: 200px;
+        width: 150px;
+        display: inline-block;
+        position: absolute;
+        top:40px;
+        border: 1px solid $border-color;
+        z-index: 99;
+        background-color: #fff;
+        overflow: auto;
+        transition: all;
+        
+        div{
+          padding: 5px;
+          border-bottom: 1px solid $border-color;
+        }
+      }
+      .hide{
+        display: none;
+        height: 0px;
+        overflow: hidden;
+      }
+    }
+    .right-filter, .clear-filter{
+      position: absolute;
+      top: 24px;
+      right: 30px;
+      .options{
+        width: 100%;
+      }
+    }
+    .clear-filter{
+      top: 64px;
+      text-align: right;
+      right: 30px;
+      text-decoration: underline;
+      color: $primary-button;
+      font-weight: 600;
+    }
+    
+  }
+
+  
+// For Card view
+  .movie-cards{
+    width: 90%;
+    border: 1px solid $header-background;
+    .card-container{
+      margin: 15px 5px 15px 5px;
+      width: 300px;
+
+      img{
+        width: 100%;
+        height: 400px;
+      }
+      span{
+        font-weight: bold;
+      }
+    }
+  }
+  @media screen and (max-width: 770px){
+    .clear-filter{
+      top: 0px!important
+    }
+    .right-filter{
+      position: relative!important;
+      top: revert!important;
+      right: revert!important;
+      left: 10px;
+    }
+    .input-btn{
+      width: 190px!important;
+    }
+    
+  }
+}

@@ -1,0 +1,114 @@
+$block-background: #F9F8F7;
+$header-background: #00a4bd;
+$highlighter-font: #fff;
+$helper-style-color: #FF6C00;
+$primary-button: #0275d8;
+$border-color: #C1C1C1;
+
+
+body {
+  margin: 0;
+  font-family: 'Roboto', 'Montserrat', sans-serif;
+}
+
+.exercise-header {
+  padding: 1rem 0;
+  margin: 2rem 0;
+  text-align: center;
+  color: $highlighter-font;
+  background-color: $header-background;
+}
+.display-flex{
+  display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;      /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  
+}
+.help--container{
+  background-color: $block-background;
+}
+.help{
+  width: 500px;
+  padding: 0px 20px;
+  border-left: 2px solid $helper-style-color;
+  text-align: justify;
+
+  position: relative;
+}
+.quotation{
+  position: absolute;
+  left: -11px;
+  width: 20px;
+  height: 20px;
+  background: $helper-style-color;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 26px;
+  color:$highlighter-font;
+}
+.endBlock{
+  font-size: 13px;
+}
+a{
+  padding: 15px;
+  background-color: $primary-button;
+  border-radius: 10px;
+  color: white;
+}
+.point-style-css{
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: $helper-style-color;
+  position: absolute;
+  left: -4px;
+  bottom: 0px;
+  
+}
+.curser-pointer{
+  cursor: pointer;
+  text-decoration: underline;
+  color: $primary-button;
+  font-weight: 600;
+}
+@media screen and (max-width: 430px){
+  .help--container{
+    flex-direction: column;
+    -webkit-box-orient: horizontal;
+    -moz-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -moz-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+  .help{
+    width: 237px;
+    font-size: 13px;
+    padding-right: 0px;
+    margin-bottom: 20px;
+  }
+  .font-normal{
+    font-size: 13px;
+  }
+  a{
+    padding: 10px;
+  }
+}
+
+
+// global CSS
+
+.container{
+  padding: 20px;
+  border: 1px solid grey;
+}
+.position-relative{
+  position: relative;
+}
